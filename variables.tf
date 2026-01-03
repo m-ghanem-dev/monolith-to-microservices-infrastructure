@@ -3,5 +3,21 @@ variable "k8s_version" {
 }
 
 variable "eks_cluster_name" {
-  default = "movie-picture-eks-cluster"
+  default = "my-eks-cluster"
 }
+
+variable "db_name" {
+  description = "The name of the PostgreSQL database."
+  default     = "mydatabase"
+}
+
+variable "db_username" {
+  description = "The username for the PostgreSQL database."
+  default     = "admin"
+}
+
+variable "db_password" {
+  description = "The password for the PostgreSQL database."
+  default     = "changeme123"
+}
+

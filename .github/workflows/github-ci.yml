@@ -1,4 +1,4 @@
-name: Movie Picture Infrastructure
+name: Infrastructure
 
 on:
   workflow_dispatch:
