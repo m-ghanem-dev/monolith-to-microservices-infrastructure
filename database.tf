@@ -3,7 +3,7 @@ resource "aws_db_instance" "postgres" {
   engine              = "postgres"
   engine_version      = "14.5"
   instance_class      = "db.t3.micro"
-  name                = var.db_name
+  db_name             = var.db_name
   username            = var.db_username
   password            = var.db_password
   publicly_accessible = true
@@ -23,6 +23,7 @@ resource "aws_security_group" "postgres_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  # egress automatically allows outbound traffic to ingress source in security groups but we can be explicit
   egress {
     from_port   = 0
     to_port     = 0
