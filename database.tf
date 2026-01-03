@@ -15,6 +15,7 @@ resource "aws_db_instance" "postgres" {
 
 resource "aws_security_group" "postgres_sg" {
   name_prefix = "postgres-sg"
+  vpc_id      = module.vpc.vpc_id
 
   ingress {
     from_port   = 5432
