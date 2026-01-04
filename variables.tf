@@ -7,7 +7,7 @@ variable "eks_cluster_name" {
 }
 
 variable "bucket_name" {
-  default = "my-cool_pic_bucket_with_randomness-123456"
+  default = "my_cool_pic_bucket_with_randomness-123456"
 }
 
 variable "db_name" {
