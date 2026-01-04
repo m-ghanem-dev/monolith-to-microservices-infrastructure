@@ -6,6 +6,10 @@ variable "eks_cluster_name" {
   default = "my-eks-cluster"
 }
 
+variable "bucket_name" {
+  default = "my-cool_pic_bucket_with_randomness-123456"
+}
+
 variable "db_name" {
   description = "The name of the PostgreSQL database."
   default     = "mydatabase"
