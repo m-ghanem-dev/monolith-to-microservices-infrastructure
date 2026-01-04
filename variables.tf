@@ -7,7 +7,9 @@ variable "eks_cluster_name" {
 }
 
 variable "bucket_name" {
-  default = "my_cool_pic_bucket_with_randomness-123456"
+  description = "The name of the S3 bucket."
+  default = "my-cool-pic-bucket-with-randomness-123456"
+
 }
 
 variable "db_name" {
