@@ -25,11 +25,11 @@ module "eks" {
 
 resource "aws_security_group_rule" "allow_ports" {
   type              = "ingress"
-  from_port         = 30007
-  to_port           = 30008
+  from_port         = 30001
+  to_port           = 30004
   protocol          = "tcp"
   security_group_id = module.eks.node_security_group_id
   cidr_blocks       = ["0.0.0.0/0"] # should be security group of load balancer (source_security_group_id = sg id of load balancer)
-  description       = "Allow TCP traffic from anywhere to port 30007 - 30008 (backend and frontend node ports respectively)"
+  description       = "Allow TCP traffic from anywhere to port 30001 - 30004 (feed, user, proxy and frontend node ports respectively)"
 }
 
