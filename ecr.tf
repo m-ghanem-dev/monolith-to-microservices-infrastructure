@@ -21,8 +21,8 @@ resource "aws_ecr_repository" "feed" {
   }
 }
 
-resource "aws_ecr_repository" "reverse_proxy" {
-  name                 = "reverse_proxy"
+resource "aws_ecr_repository" "reverseproxy" {
+  name                 = "reverseproxy"
   image_tag_mutability = "MUTABLE"
   force_delete         = true
 
