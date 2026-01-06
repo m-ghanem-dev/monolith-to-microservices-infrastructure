@@ -11,7 +11,7 @@ variable "bucket_name" {
   default = "my-cool-pic-bucket-with-randomness-123456"
 
 }
-
+### Best in AWS Secrets Manager for production use ###
 variable "db_name" {
   description = "The name of the PostgreSQL database."
   default     = "mydatabase"
